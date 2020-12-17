@@ -1,9 +1,12 @@
-// package.json -> "type": "module" -> use import ... from ...
+// package.json -> set "type": "module" -> use import ... from ...
 import express from 'express'
 import dotenv from 'dotenv'
+import connectDB from './config/db.js'
 import products from './data/products.js'
 
 dotenv.config()
+
+connectDB()
 
 const app = express()
 
